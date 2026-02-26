@@ -1,0 +1,42 @@
+/* C programming language */
+
+int a[10];
+
+int one(int k, int n)
+{
+   if (k >= 10) a[0] = n;
+   return a[k];           /* Warning: k could be 10 */
+}
+
+int *two(int *p)
+{
+   if (p) printf("\n");   /* p could be NULL... */
+   printf("%d", *p);      /* Warning */
+   return p + 2;          /* Warning */
+}
+
+void three(void)
+{
+   int a[10], *p, *q;
+   p = a + 10;            /* OK, not uncommon */
+   *p = 0;                /* Warning */ 
+   q = p + 1;             /* Warning */
+   q[0] = 0;              /* Warning */
+}
+
+int x(int n)
+{
+   return n - 1;
+}
+
+int y(int n)
+{
+   return n / x(1);       /* Warning after 2nd pass */
+}
+
+int z(int n)
+{
+   if (n > 0) n = 0;
+   else if (n <= 0) n = -1;   /* Warning */
+   return n;
+}

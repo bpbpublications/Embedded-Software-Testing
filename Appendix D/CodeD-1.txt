@@ -1,0 +1,8 @@
+| **Parameter**                   | **Equivalence class**                        |
+|---------------------------------|----------------------------------------------|
+| **Status of the coin magazine** | **full, neither full nor empty, empty, sensor error** |
+| **Water temperature sensor**    | cold (1 to 80°C), hot (81 to 255°C), sensor error (measurement value 0) |
+| Beverage button                 | **coffee, cocoa, tea, no button, more than one button pressed** |
+| **Extra button**                | **Pressed (***no sugar***), not pressed**    |
+
+We are performing software testing on this interface and wish to test the minimum number of combinations that will exercise all parts of the code. Please return a table showing the combinations we should test. And a short summary explaining the rationale.
